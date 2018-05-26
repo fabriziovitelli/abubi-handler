@@ -29,6 +29,13 @@ public class Entry implements Serializable{
 		this.date = date;
 	}
 	
+	public boolean equals(Object o) {
+		if( !(o instanceof Entry) ) return false;
+		if( o==this ) return true;
+		Entry e = (Entry)o;
+		return e.date.equals(date) && e.user.equals(user);
+	}
+	
 	public String toString() {
 		return String.format("Entry: user=%s date=%s", user, DateFormatter.timeFormatter.format(date));
 	}

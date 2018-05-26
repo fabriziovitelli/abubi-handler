@@ -40,6 +40,13 @@ public class Day implements Comparable<Day>{
 		return date.compareTo(o.date);
 	}
 	
+	public boolean equals(Object o) {
+		if( !(o instanceof Day) ) return false;
+		if( o==this ) return true;
+		Day d = (Day)o;
+		return d.date.equals(date);
+	}
+	
 	public String toString() {
 		return String.format("day=%s entries=%s", DateFormatter.dayFormatter.format(date), entries);
 	}
