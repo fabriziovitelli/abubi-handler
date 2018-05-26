@@ -1,11 +1,13 @@
 package com.me.abubi.utils;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Entry implements Serializable{
 	
 	private static final long serialVersionUID = 4946254064503890369L;
+	
 	private String user;
 	private Date date;
 	
@@ -27,6 +29,8 @@ public class Entry implements Serializable{
 		this.date = date;
 	}
 	
-	
+	public String toString() {
+		return String.format("Entry: user=%s date=%s", user, DateFormatter.timeFormatter.format(date));
+	}
 
 }
