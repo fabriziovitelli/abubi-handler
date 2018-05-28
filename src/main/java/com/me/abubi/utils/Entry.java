@@ -1,12 +1,20 @@
 package com.me.abubi.utils;
 
+import java.awt.Color;
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Entry implements Serializable{
 	
 	private static final long serialVersionUID = 4946254064503890369L;
+
+	public static final Color kColor = Color.RED;
+	public static final Color pColor = Color.YELLOW;
+	public static final Color fColor = Color.BLUE;
+
+	public static final String kNick = "k";
+	public static final String pNick = "p";
+	public static final String fNick = "f";
 	
 	private String user;
 	private Date date;
